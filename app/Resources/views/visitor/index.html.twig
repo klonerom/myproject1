@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div id="welcome">
+                <h1>Page d'accueil de myproject1</h1>
+                Symfony Version {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}
+            </div>
+            <div class="link">
+                <a href="{{ path('login') }}">user login</a><br />
+                <a href="{{ path('user_registration') }}">user registration</a><br />
+                <a href="{{ path('admin') }}">admin login</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
