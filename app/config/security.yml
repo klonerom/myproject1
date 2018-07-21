@@ -29,6 +29,11 @@ security:
                 default_target_path: /
             provider: user_provider
 
+    role_hierarchy:
+        #ADMIN is an user too
+        ROLE_ADMIN:       ROLE_USER
+
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, roles: ROLE_ADMIN }
+        #- { path: ^/membre, roles: ROLE_USER }
